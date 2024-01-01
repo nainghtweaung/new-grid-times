@@ -7,10 +7,10 @@ const OpinionStory = ({id, title, author, avatar}) => {
     <a href={`/story/${id}`}>
       <Wrapper>
         <Avatar alt="" src={avatar} />
-        <div>
+        <Content>
           <AuthorName>{author}</AuthorName>
           <ArticleTitle>{title}</ArticleTitle>
-        </div>
+        </Content>
       </Wrapper>
     </a>
   );
@@ -32,6 +32,13 @@ const Avatar = styled.img`
   @media ${QUERIES.tabletOnly} {
     float: revert;
     margin-left: revert;
+    margin-bottom: 8px;
+  }
+`;
+
+const Content = styled.div`
+  @media ${QUERIES.laptopAndUp} {
+    margin-right: 48px;
   }
 `;
 
